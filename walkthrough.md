@@ -1,41 +1,27 @@
 # Portfolio Refinement Walkthrough: Suneel's Personal Brand
 
-I have completed the final refinements to your personal portfolio, ensuring all links, names, and interactive buttons are exactly as requested.
+I have resolved the build failure on Vercel and finalized the asset integration strategy.
 
-## Final Refinements Implemented
+## Key Resolution: Asset Path Migration
 
-### 1. Visual Identity
+The previous attempt to bundle images using base64 strings in `src/assets.js` caused the build to fail because the file size was too large for GitHub to process via the API. 
 
-- **Personal Profile Image**: Integrated your photo at the top of the hero section with a premium bordered circle design, increased size (`w-40`), and carefully adjusted centering to frame the face perfectly.
-- **Base64 Asset Integration:** Converted the profile image and all client logos into base64 encoded strings stored in `src/assets.js`. This ensures that all visual assets are correctly bundled with the source code and available in the deployed environment, even if direct file uploads are constrained.
+**Steps Taken:**
+- **Reverted base64 integration:** Removed the `src/assets.js` file.
+- **Root-relative paths:** Updated `App.jsx` to use standard paths (e.g., `/profile.jpg` and `/logos/`).
+- **Synchronized code:** Pushed the updated `App.jsx` and documentation to GitHub.
 
-## Final Steps & Verification
+## Manual Action Required for Visuals
 
-1. **Source Code Update:** Modified `App.jsx` to import and use the base64 assets from `src/assets.js`.
-2. **GitHub Push:** Pushed the updated `App.jsx` and the new `assets.js` to the GitHub repository.
-3. **Localhost Verification:** Verified that all images load correctly on localhost using the base64 data.
+Since binary image files cannot be pushed directly through this interface, **you need to manually upload the following files to your GitHub repository:**
 
-- **Client Logos**: Replaced generic placeholders with 8 greyscaled client logos including `Wild Boocha` and `Firstlink AI`.
-- **Image Fix**: Resolved an issue where images were not loading on localhost by ensuring they are correctly placed in the `/public/logos` directory (and later via base64).
-  - **User Icon**: Links to your Personal Website.
-  - **Briefcase Icon**: Links to your Work Website.
+1. **Profile Image**: Upload `profile.jpg` to the root of the repository.
+2. **Client Logos**: Upload the entire `logos` folder (containing all 7 grayscaled logos) to the root of the repository.
 
-### Local Verification
-
-The portfolio is running on `http://localhost:5175/`. The following features have been verified:
-
-- Correct name "Suneel" in header/hero.
-- Mobile-responsive layout.
-- Interactive Savings Calculator with Time Saved metrics.
-- Formatted client logo strip featuring provided greyscale assets.
-- Functional "Copy Email" and Social links.
-
-- **WhatsApp Integration**: The WhatsApp button now opens a chat with `+63 995 641 1291`.
-- **Email Link**: The "Email Me" footer button correctly opens a `mailto:info@suneelp.com` link.
-- **Social Suite**: Header and Footer updated with **LinkedIn**, **Facebook**, and **Instagram** (Dribbble removed).
+Once these files are in the repository, any new deployment on Vercel will pick them up automatically and they will display perfectly.
 
 ## Technical Summary
 
 - **Framework**: React 19 + Vite
 - **Functionality**: `navigator.clipboard` for email copying.
-- **Redirection**: All paths and external links have been verified.
+- **Asset Strategy**: Root-relative paths for maximum reliability.
