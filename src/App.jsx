@@ -43,26 +43,26 @@ const App = () => {
                         {copied ? <Check className="w-3 h-3 text-green-500" /> : <Copy className="w-3 h-3" />}
                         {copied ? "Copied!" : "Copy Email"}
                     </button>
-                    <div className="flex gap-2 ml-2">
-                        <a href="https://suneelp.com/" target="_blank" rel="noopener noreferrer" className="bg-white p-2 rounded-full border border-black/5 shadow-sm hover:bg-black/5 transition-colors" title="Personal Website">
-                            <User className="w-4 h-4" />
+                    <div className="flex gap-3 ml-2">
+                        <a href="https://suneelp.com/" target="_blank" rel="noopener noreferrer" className="bg-white p-2.5 rounded-full border border-black/5 shadow-sm hover:bg-black/5 transition-colors" title="Personal Website">
+                            <User className="w-5 h-5" />
                         </a>
-                        <a href="https://firstlinkai.com/" target="_blank" rel="noopener noreferrer" className="bg-white p-2 rounded-full border border-black/5 shadow-sm hover:bg-black/5 transition-colors" title="Work Website">
-                            <Briefcase className="w-4 h-4" />
+                        <a href="https://firstlinkai.com/" target="_blank" rel="noopener noreferrer" className="bg-white p-2.5 rounded-full border border-black/5 shadow-sm hover:bg-black/5 transition-colors" title="Work Website">
+                            <Briefcase className="w-5 h-5" />
                         </a>
                     </div>
                 </div>
-                <div className="flex gap-6 items-center">
-                    <a href="https://www.linkedin.com/in/suneel-p/" target="_blank" rel="noopener noreferrer" className="hover:text-black transition-colors flex items-center gap-1.5">
-                        <Linkedin className="w-4 h-4" />
+                <div className="flex gap-8 items-center">
+                    <a href="https://www.linkedin.com/in/suneel-p/" target="_blank" rel="noopener noreferrer" className="hover:text-black transition-colors flex items-center gap-2">
+                        <Linkedin className="w-5 h-5" />
                         <span>LinkedIn</span>
                     </a>
-                    <a href="https://www.facebook.com/aifirstlink/" target="_blank" rel="noopener noreferrer" className="hover:text-black transition-colors flex items-center gap-1.5">
-                        <Facebook className="w-4 h-4" />
+                    <a href="https://www.facebook.com/aifirstlink/" target="_blank" rel="noopener noreferrer" className="hover:text-black transition-colors flex items-center gap-2">
+                        <Facebook className="w-5 h-5" />
                         <span>Facebook</span>
                     </a>
-                    <a href="https://www.instagram.com/firstlinkai/" target="_blank" rel="noopener noreferrer" className="hover:text-black transition-colors flex items-center gap-1.5">
-                        <Instagram className="w-4 h-4" />
+                    <a href="https://www.instagram.com/firstlinkai/" target="_blank" rel="noopener noreferrer" className="hover:text-black transition-colors flex items-center gap-2">
+                        <Instagram className="w-5 h-5" />
                         <span>Instagram</span>
                     </a>
                 </div>
@@ -71,14 +71,15 @@ const App = () => {
             {/* Hero Section */}
             <section className="max-w-4xl mx-auto pt-20 pb-24 px-6 flex flex-col items-center text-center">
                 <div className="relative mb-8">
-                    <div className="w-24 h-24 rounded-full overflow-hidden border-2 border-white shadow-lg bg-white">
-                        {/* Profile image placeholder */}
-                        <div className="w-full h-full bg-gradient-to-br from-gray-200 to-gray-400 flex items-center justify-center text-white font-bold text-2xl uppercase">
-                            S
-                        </div>
+                    <div className="w-40 h-40 rounded-full overflow-hidden border-4 border-white shadow-xl bg-white group hover:scale-105 transition-transform duration-300">
+                        <img
+                            src="/profile.jpg"
+                            alt="Suneel"
+                            className="w-full h-full object-cover object-[center_20%]"
+                        />
                     </div>
-                    <div className="absolute -top-2 -right-8 bg-white px-3 py-1 rounded-full border border-black/5 shadow-md flex items-center gap-2 animate-bounce">
-                        <span className="text-[12px] font-bold">Suneel 👋</span>
+                    <div className="absolute top-2 -right-4 bg-white px-4 py-1.5 rounded-full border border-black/5 shadow-md flex items-center gap-2 animate-bounce cursor-default">
+                        <span className="text-[14px] font-bold">Suneel 👋</span>
                     </div>
                 </div>
 
@@ -97,13 +98,15 @@ const App = () => {
                 </a>
 
                 {/* Logo Strip */}
-                <div className="mt-28 w-full">
-                    <div className="flex flex-wrap justify-center gap-12 md:gap-20 items-center opacity-30 grayscale saturate-0 hover:opacity-50 transition-opacity">
-                        <img src="/logos/floowy.png" alt="Floowy.ai" className="h-6 md:h-8 object-contain" />
-                        <img src="/logos/dgtlbase.png" alt="DGTL BASE" className="h-8 md:h-10 object-contain" />
-                        <img src="/logos/speakeasy.png" alt="SpeakEasy Marketing" className="h-8 md:h-10 object-contain" />
-                        <img src="/logos/10xgrowth.jpg" alt="10xGrowth" className="h-6 md:h-8 object-contain" />
-                        <img src="/logos/botanic.png" alt="Botanic" className="h-6 md:h-8 object-contain" />
+                <div className="mt-28 w-full overflow-hidden">
+                    <div className="flex flex-wrap justify-center gap-10 md:gap-16 items-center opacity-30 grayscale saturate-0 hover:opacity-50 transition-opacity">
+                        <img src="/logos/floowy.png" alt="Floowy.ai" className="h-8 md:h-12 object-contain" />
+                        <img src="/logos/dgtlbase.png" alt="DGTL BASE" className="h-10 md:h-16 object-contain" />
+                        <img src="/logos/speakeasy.png" alt="SpeakEasy Marketing" className="h-10 md:h-16 object-contain" />
+                        <img src="/logos/10xgrowth.jpg" alt="10xGrowth" className="h-8 md:h-12 object-contain" />
+                        <img src="/logos/botanic.png" alt="Botanic" className="h-8 md:h-12 object-contain" />
+                        <img src="/logos/wildboocha.png" alt="Wild Boocha" className="h-10 md:h-14 object-contain" />
+                        <img src="/logos/firstlinkai.jpg" alt="Firstlink AI" className="h-8 md:h-12 object-contain" />
                     </div>
                 </div>
             </section>
@@ -221,7 +224,7 @@ const App = () => {
                             href={`mailto:${email}`}
                             className="bg-black text-white px-8 py-3 rounded-full font-bold hover:scale-[1.02] transition-transform flex items-center gap-2 shadow-lg shadow-black/10"
                         >
-                            <Mail className="w-4 h-4" />
+                            <Mail className="w-5 h-5" />
                             Email Me
                         </a>
                         <a
@@ -230,17 +233,26 @@ const App = () => {
                             rel="noopener noreferrer"
                             className="bg-white text-black border border-black/10 px-8 py-3 rounded-full font-bold hover:bg-black/5 transition-colors shadow-sm flex items-center gap-2"
                         >
-                            <Smartphone className="w-4 h-4" />
+                            <Smartphone className="w-5 h-5" />
                             WhatsApp
                         </a>
                     </div>
                 </div>
                 <div className="mt-20 pt-10 border-t border-black/5 flex justify-between items-center text-black/30 text-[12px] font-medium uppercase tracking-widest">
                     <span>© 2024 Suneel</span>
-                    <div className="flex gap-6">
-                        <a href="https://www.linkedin.com/in/suneel-p/" target="_blank" rel="noopener noreferrer" className="hover:text-black transition-colors">LinkedIn</a>
-                        <a href="https://www.facebook.com/aifirstlink/" target="_blank" rel="noopener noreferrer" className="hover:text-black transition-colors">Facebook</a>
-                        <a href="https://www.instagram.com/firstlinkai/" target="_blank" rel="noopener noreferrer" className="hover:text-black transition-colors">Instagram</a>
+                    <div className="flex gap-6 items-center">
+                        <a href="https://www.linkedin.com/in/suneel-p/" target="_blank" rel="noopener noreferrer" className="hover:text-black transition-colors flex items-center gap-2">
+                            <Linkedin className="w-5 h-5" />
+                            <span>LinkedIn</span>
+                        </a>
+                        <a href="https://www.facebook.com/aifirstlink/" target="_blank" rel="noopener noreferrer" className="hover:text-black transition-colors flex items-center gap-2">
+                            <Facebook className="w-5 h-5" />
+                            <span>Facebook</span>
+                        </a>
+                        <a href="https://www.instagram.com/firstlinkai/" target="_blank" rel="noopener noreferrer" className="hover:text-black transition-colors flex items-center gap-2">
+                            <Instagram className="w-5 h-5" />
+                            <span>Instagram</span>
+                        </a>
                     </div>
                 </div>
             </section>
