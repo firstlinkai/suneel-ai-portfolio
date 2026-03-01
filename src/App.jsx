@@ -19,17 +19,15 @@ import {
     Copy,
     Check
 } from 'lucide-react';
-import { profileImage, clientLogos } from './assets';
 
 const clients = [
-    { name: "National Bank", logo: clientLogos["national-bank"] },
-    { name: "Mattered", logo: clientLogos["mattered"] },
-    { name: "CocaCola", logo: clientLogos["cocacola"] },
-    { name: "Adobe", logo: clientLogos["adobe"] },
-    { name: "Subway", logo: clientLogos["subway"] },
-    { name: "Codecademy", logo: clientLogos["codecademy"] },
-    { name: "Wild Boocha", logo: clientLogos["wild-boocha"] },
-    { name: "Firstlink AI", logo: clientLogos["firstlink-ai"] },
+    { name: "SpeakEasy Marketing", logo: "/logos/speakeasy.png" },
+    { name: "Floowy.ai", logo: "/logos/floowy.png" },
+    { name: "DGTL BASE", logo: "/logos/dgtlbase.png" },
+    { name: "10xGrowth", logo: "/logos/10xgrowth.jpg" },
+    { name: "Botanic", logo: "/logos/botanic.png" },
+    { name: "Wild Boocha", logo: "/logos/wildboocha.png" },
+    { name: "Firstlink AI", logo: "/logos/firstlinkai.jpg" },
 ];
 
 const App = () => {
@@ -85,8 +83,7 @@ const App = () => {
                 <div className="relative mb-8">
                     <div className="w-40 h-40 rounded-full overflow-hidden border-4 border-white shadow-xl bg-white group hover:scale-105 transition-transform duration-300">
                         <img
-                            src={profileImage}
-                            // Base64 profile image from assets.js
+                            src="/profile.jpg"
                             alt="Suneel"
                             className="w-full h-full object-cover object-[center_20%]"
                         />
