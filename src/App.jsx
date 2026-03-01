@@ -19,6 +19,18 @@ import {
     Copy,
     Check
 } from 'lucide-react';
+import { profileImage, clientLogos } from './assets';
+
+const clients = [
+    { name: "National Bank", logo: clientLogos["national-bank"] },
+    { name: "Mattered", logo: clientLogos["mattered"] },
+    { name: "CocaCola", logo: clientLogos["cocacola"] },
+    { name: "Adobe", logo: clientLogos["adobe"] },
+    { name: "Subway", logo: clientLogos["subway"] },
+    { name: "Codecademy", logo: clientLogos["codecademy"] },
+    { name: "Wild Boocha", logo: clientLogos["wild-boocha"] },
+    { name: "Firstlink AI", logo: clientLogos["firstlink-ai"] },
+];
 
 const App = () => {
     const [copied, setCopied] = useState(false);
@@ -73,7 +85,8 @@ const App = () => {
                 <div className="relative mb-8">
                     <div className="w-40 h-40 rounded-full overflow-hidden border-4 border-white shadow-xl bg-white group hover:scale-105 transition-transform duration-300">
                         <img
-                            src="/profile.jpg"
+                            src={profileImage}
+                            // Base64 profile image from assets.js
                             alt="Suneel"
                             className="w-full h-full object-cover object-[center_20%]"
                         />
@@ -100,13 +113,18 @@ const App = () => {
                 {/* Logo Strip */}
                 <div className="mt-28 w-full overflow-hidden">
                     <div className="flex flex-wrap justify-center gap-10 md:gap-16 items-center opacity-30 grayscale saturate-0 hover:opacity-50 transition-opacity">
-                        <img src="/logos/floowy.png" alt="Floowy.ai" className="h-8 md:h-12 object-contain" />
-                        <img src="/logos/dgtlbase.png" alt="DGTL BASE" className="h-10 md:h-16 object-contain" />
-                        <img src="/logos/speakeasy.png" alt="SpeakEasy Marketing" className="h-10 md:h-16 object-contain" />
-                        <img src="/logos/10xgrowth.jpg" alt="10xGrowth" className="h-8 md:h-12 object-contain" />
-                        <img src="/logos/botanic.png" alt="Botanic" className="h-8 md:h-12 object-contain" />
-                        <img src="/logos/wildboocha.png" alt="Wild Boocha" className="h-10 md:h-14 object-contain" />
-                        <img src="/logos/firstlinkai.jpg" alt="Firstlink AI" className="h-8 md:h-12 object-contain" />
+                        {clients.map((client, index) => (
+                            <img
+                                key={index}
+                                src={client.logo}
+                                alt={client.name}
+                                className={
+                                    client.name === "DGTL BASE" || client.name === "SpeakEasy Marketing" || client.name === "Wild Boocha"
+                                        ? "h-10 md:h-16 object-contain"
+                                        : "h-8 md:h-12 object-contain"
+                                }
+                            />
+                        ))}
                     </div>
                 </div>
             </section>
