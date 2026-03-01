@@ -21,13 +21,13 @@ import {
 } from 'lucide-react';
 
 const clients = [
-    { name: "SpeakEasy Marketing", logo: "/logos/speakeasy.png" },
-    { name: "Floowy.ai", logo: "/logos/floowy.png" },
-    { name: "DGTL BASE", logo: "/logos/dgtlbase.png" },
-    { name: "10xGrowth", logo: "/logos/10xgrowth.jpg" },
-    { name: "Botanic", logo: "/logos/botanic.png" },
-    { name: "Wild Boocha", logo: "/logos/wildboocha.png" },
-    { name: "Firstlink AI", logo: "/logos/firstlinkai.jpg" },
+    { name: "SpeakEasy Marketing", logo: "/speakeasy.png" },
+    { name: "Floowy.ai", logo: "/floowy.png" },
+    { name: "DGTL BASE", logo: "/dgtlbase.png" },
+    { name: "10xGrowth", logo: "/10xgrowth.jpg" },
+    { name: "Botanic", logo: "/botanic.png" },
+    { name: "Wild Boocha", logo: "/wildboocha.png" },
+    { name: "Firstlink AI", logo: "/firstlinkai.jpg" },
 ];
 
 const App = () => {

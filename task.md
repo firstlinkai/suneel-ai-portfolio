@@ -10,9 +10,9 @@
     - [x] Switch to root-relative paths for assets <!-- id: 20 -->
     - [x] Push path updates to GitHub <!-- id: 21 -->
   - [x] Configure Tailwind for glassmorphism and dark theme
-- [ ] GitHub Asset Sync
-  - [/] User to manually upload `public/` folder to GitHub root <!-- id: 22 -->
-  - [ ] Verify build and image rendering on Vercel <!-- id: 23 -->
+- [x] GitHub Asset Sync
+  - [x] User to manually upload `public/` folder to GitHub root <!-- id: 22 -->
+  - [x] Verify build and image rendering on Vercel <!-- id: 23 -->
 - [x] Refinement & Polish
   - [x] Integrate 7 Client Logos (SpeakEasy, Floowy, DGTL BASE, 10xGrowth, Botanic, Wild Boocha, Firstlink AI)
   - [x] Integrate **Personal Profile Image**
@@ -27,4 +27,4 @@
   - [x] Create GitHub repository `firstlinkai/suneel-ai-portfolio`
   - [x] Upload project files (React, Vite, Tailwind v4)
   - [x] Resolved build failure by switching to relative asset paths
-  - [ ] Prepare for Vercel hosting
+  - [x] Verified manual asset upload and synced code to match flattened structure.
