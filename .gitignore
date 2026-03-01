@@ -1,0 +1,6 @@
+node_modules
+dist
+.agent
+.gemini
+package-lock.json
+*.local
