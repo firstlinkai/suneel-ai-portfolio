@@ -98,13 +98,12 @@ const App = () => {
 
                 {/* Logo Strip */}
                 <div className="mt-28 w-full">
-                    <div className="flex flex-wrap justify-center gap-10 md:gap-16 items-center opacity-30 grayscale saturate-0">
-                        <span className="font-bold text-lg uppercase tracking-widest">National Bank</span>
-                        <span className="font-bold text-lg lowercase italic">mattered</span>
-                        <span className="font-bold text-lg">CocaCola</span>
-                        <span className="font-bold text-lg uppercase italic tracking-tighter">Adobe</span>
-                        <span className="font-bold text-lg uppercase">Subway</span>
-                        <span className="font-bold text-lg lowercase opacity-80 decoration-slice">codecademy</span>
+                    <div className="flex flex-wrap justify-center gap-12 md:gap-20 items-center opacity-30 grayscale saturate-0 hover:opacity-50 transition-opacity">
+                        <img src="/logos/floowy.png" alt="Floowy.ai" className="h-6 md:h-8 object-contain" />
+                        <img src="/logos/dgtlbase.png" alt="DGTL BASE" className="h-8 md:h-10 object-contain" />
+                        <img src="/logos/speakeasy.png" alt="SpeakEasy Marketing" className="h-8 md:h-10 object-contain" />
+                        <img src="/logos/10xgrowth.jpg" alt="10xGrowth" className="h-6 md:h-8 object-contain" />
+                        <img src="/logos/botanic.png" alt="Botanic" className="h-6 md:h-8 object-contain" />
                     </div>
                 </div>
             </section>
